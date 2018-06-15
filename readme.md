@@ -4,6 +4,14 @@
 
 * [lumen-generators](https://github.com/webNeat/lumen-generators)
 * [laravel-cors](https://github.com/barryvdh/laravel-cors)
+* [league/fractal](https://github.com/league/fractal)
+
+
+### Authentication
+
+```http
+Authorization: bearer <API_TOKEN>
+```
 
 ### Register an User
 
@@ -15,3 +23,11 @@ Params:
 - `email` (string) - The user email
 - `password` (string) - The password
 - `password_confirmation` (string) - The confirmation password
+
+### Login
+
+[POST /login]
+
+Params:
+- `email` (string) - The user email
+- `password` (string) - The password

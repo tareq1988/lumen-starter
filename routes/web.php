@@ -16,7 +16,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('/register', ['uses' => 'Auth\RegisterController@register']);
+$router->post('/login', 'Auth\LoginController@login');
+$router->post('/register', 'Auth\RegisterController@register');
 
 $router->get('/me', ['middleware' => 'auth', function (Request $request) {
 
