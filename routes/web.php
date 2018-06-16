@@ -10,7 +10,6 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-use Illuminate\Http\Request;
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
@@ -18,10 +17,6 @@ $router->get('/', function () use ($router) {
 
 $router->post('/login', 'Auth\LoginController@login');
 $router->post('/register', 'Auth\RegisterController@register');
-
-$router->get('/me', ['middleware' => 'auth', function (Request $request) {
-
-    $user = $request->user();
-
-    return $user;
-}]);
+$router->get('/me', 'ProfileController@currentProfile');
+$router->post('/me', 'ProfileController@updateCurrentProfile');
+$router->post('/me/password', 'ProfileController@updatePassword');

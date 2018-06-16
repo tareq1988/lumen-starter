@@ -20,7 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('api_token');
             $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
