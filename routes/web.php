@@ -20,3 +20,9 @@ $router->post('/register', 'Auth\RegisterController@register');
 $router->get('/me', 'ProfileController@currentProfile');
 $router->post('/me', 'ProfileController@updateCurrentProfile');
 $router->post('/me/password', 'ProfileController@updatePassword');
+
+// Password Reset
+$router->post('/forgot-password', 'Auth\PasswordResetController@sendResetLinkEmail');
+$router->get('/change-password', [ 'as' => 'password.reset', function() {
+    echo 'A placeholder for password reset link';
+} ]);
