@@ -41,7 +41,7 @@ class ProfileController extends Controller
         $this->validate($request, $this->rules());
 
         $user = $request->user();
-        $user->update($request->only('first_name', 'last_name'));
+        $user->update($request->only('first_name', 'last_name', 'email'));
 
         return $user;
     }
