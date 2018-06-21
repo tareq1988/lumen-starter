@@ -17,12 +17,12 @@ $router->get('/', function () use ($router) {
 
 $router->post('/login', 'Auth\LoginController@login');
 $router->post('/register', 'Auth\RegisterController@register');
+
+// Personal Profile
 $router->get('/me', 'ProfileController@currentProfile');
 $router->post('/me', 'ProfileController@updateCurrentProfile');
 $router->post('/me/password', 'ProfileController@updatePassword');
 
 // Password Reset
-$router->post('/forgot-password', 'Auth\PasswordResetController@sendResetLinkEmail');
-$router->get('/change-password', [ 'as' => 'password.reset', function() {
-    echo 'A placeholder for password reset link';
-} ]);
+$router->post('/password/request', 'Auth\PasswordResetController@sendResetLinkEmail');
+$router->post('/password/reset', 'Auth\PasswordResetController@reset');
