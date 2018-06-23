@@ -4,7 +4,6 @@ A starter package to use it with [Vue Lumen Starter](https://github.com/tareq198
 
 ## Packages Added
 
-* [lumen-generators](https://github.com/webNeat/lumen-generators)
 * [laravel-cors](https://github.com/barryvdh/laravel-cors)
 * [league/fractal](https://github.com/league/fractal)
 
