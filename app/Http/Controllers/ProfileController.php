@@ -26,6 +26,10 @@ class ProfileController extends Controller
      */
     public function currentProfile(Request $request)
     {
+        // Example Role checking
+        // $request->user()->authorizeRoles(['admin', 'user']);
+        // $request->user()->authorizeRoles('admin');
+
         return $request->user();
     }
 

@@ -44,4 +44,41 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         $this->notify( new ResetPasswordNotification( $token ) );
     }
+
+    /**
+     * Get all the roles this user belongs to
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    /**
+     * Check if the user has authorized role/s
+     *
+     * @param  string|array $roles
+     *
+     * @return boolean | \Illuminate\Http\Response
+     */
+    public function authorizeRoles($roles)
+    {
+        return $this->hasRole($roles) || abort(401, 'This action is unauthorized.');
+    }
+
+    /**
+     * Check user role/s
+     *
+     * @param  string|array  $role
+     *
+     * @return boolean
+     */
+    public function hasRole($roles)
+    {
+        if ( is_array( $roles ) ) {
+            return null !== $this->roles()->whereIn('name', $roles)->first();
+        }
+
+        return null !== $this->roles()->where('name', $role)->first();
+    }
+
 }
