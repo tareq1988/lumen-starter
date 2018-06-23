@@ -5,7 +5,7 @@ A starter package to use it with [Vue Lumen Starter](https://github.com/tareq198
 ## Packages Added
 
 * [laravel-cors](https://github.com/barryvdh/laravel-cors)
-* [league/fractal](https://github.com/league/fractal)
+* [spatie/laravel-fractal](https://github.com/spatie/laravel-fractal)
 
 ## Installation
 
