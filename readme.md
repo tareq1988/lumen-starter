@@ -36,6 +36,7 @@ Authorization: bearer <API_TOKEN>
 
 <details>
 <summary>View contents</summary>
+
 `[POST /register]`
 
 Params:
@@ -58,6 +59,7 @@ Response Code:
 
 <details>
 <summary>View contents</summary>
+
 `[POST /login]`
 
 Params:
@@ -70,23 +72,27 @@ Params:
 Response Code:
  - ✅ 200: On login success
  - ❌ 401: On failure
+
 </details>
 
 ### Fetch current user profile
 
 <details>
 <summary>View contents</summary>
-[GET /me]
+
+`[GET /me]`
 
 Response Code:
  - ✅ 200: On success
  - ❌ 401: On failure
+
 </details>
 
 ### Update the current user profile
 
 <details>
 <summary>View contents</summary>
+
 `[POST /me]`
 
 Params:
@@ -99,12 +105,14 @@ Params:
 Response Code:
  - ✅ 200: On login success
  - ❌ 422: On validation failure
+
 </details>
 
 ### Change the password
 
 <details>
 <summary>View contents</summary>
+
 `[POST /me/password]`
 
 Params:
@@ -118,12 +126,14 @@ Params:
 Response Code:
  - ✅ 200: On success
  - ❌ 422: On validation failure
+
 </details>
 
 ### Request Password Reset
 
 <details>
 <summary>View contents</summary>
+
 `[POST /password/request]`
 
 Params:
@@ -135,12 +145,14 @@ Params:
 Response Code:
  - ✅ 200: On success
  - ❌ 422: On validation failure
+
 </details>
 
 ### Reset Password
 
 <details>
 <summary>View contents</summary>
+
 `[POST /password/reset]`
 
 Params:
@@ -155,6 +167,7 @@ Params:
 Response Code:
  - ✅ 200: On success
  - ❌ 422: On validation failure
+
 </details>
 
 ## Credits
